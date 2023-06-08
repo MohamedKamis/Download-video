@@ -1,6 +1,8 @@
 import sys
 import random
 import string
+from pytube import YouTube
+
 data= sys.argv
 del data[0]
 linkf=data[0]
@@ -10,11 +12,8 @@ filterf=data[2]
 def generate_random_text(length):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(length))
-
 random_text = generate_random_text(10)
-# print(random_text)
-# print(data)
-from pytube import YouTube
+
 
 yt = YouTube(linkf)
 

@@ -17,4 +17,4 @@
 # my_set = set(List)
 
 # data1= ' '.join(my_set)
-print("data1")
+print("data1 data2 data3")
