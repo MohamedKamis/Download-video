@@ -95,11 +95,11 @@ app.get('/d', (_req, res) =>
         args: [link, type, filter],
       };
       const pyshell = yield new python_shell_1.PythonShell(
-        path.resolve('./') + '/dist/py_download.py',
+        path.resolve('./') + '/py_download.py',
         options
       );
       yield pyshell.on('message', (message) => {
-        return res.download(path.resolve('./') + '/dist/donlwdes/' + message);
+        return res.download(path.resolve('./') + '/donlwdes/' + message);
         // return res.send(message);
       });
       yield pyshell.end((err) => {
@@ -121,7 +121,7 @@ app.post('/', (_req, res) =>
         args: link,
       };
       const pyshell = yield new python_shell_1.PythonShell(
-        path.resolve('./') + '/dist/script.py',
+        path.resolve('./') + '/script.py',
         options
       );
       yield pyshell.on('message', (message) => {
