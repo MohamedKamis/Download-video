@@ -98,16 +98,10 @@ app.get('/d', (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
         yield pyshell.on('message', (message) => {
             try {
                 res.download(path.resolve('./') + '/donlwdes/' + message);
-                // fs.unlink(path.resolve('./') + '/donlwdes/' + message, (err) => {
-                //   return;
-                // });
                 return;
             }
             catch (error) {
                 res.download(path.resolve('./') + '/src/donlwdes/' + message);
-                // fs.unlink(path.resolve('./') + '/donlwdes/' + message, (err) => {
-                //   return;
-                // });
                 return;
             }
             // return res.send(message);

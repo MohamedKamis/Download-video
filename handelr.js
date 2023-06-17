@@ -53,6 +53,7 @@ const create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 });
 const scan = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const link = req.body.link;
+    const newLink = link;
     const targt = req.body.targt;
     try {
         const options = {

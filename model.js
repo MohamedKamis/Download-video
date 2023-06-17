@@ -29,6 +29,7 @@ class DataUserModel {
     create(u) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log(u);
                 const connection = yield database_1.client.connect();
                 const sql = 'INSERT INTO data_users (link_v,ip_user,data,time) VALUES($1,$2,$3,$4) RETURNING *';
                 const result = yield connection.query(sql, [
