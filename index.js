@@ -62,24 +62,24 @@ app.get('/', (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
 function getLink(videoURL) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const res = yield axios_1.default.get(videoURL);
+            const res = (yield axios_1.default.get(videoURL));
             const link = res.data.split('hd_src:"')[1].split('",')[0];
             return {
-                status: "success",
-                link: link
+                status: 'success',
+                link: link,
             };
         }
         catch (error) {
             return {
-                status: "error",
-                link: null
+                status: 'error',
+                link: null,
             };
         }
     });
 }
 const axios_1 = __importDefault(require("axios"));
 app.get('/test', (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const url = "https://www.facebook.com/100010375512071/videos/521266869779239/";
+    const url = 'https://www.facebook.com/100010375512071/videos/521266869779239/';
     // const url = _req.query.videoURL as string;
     const data = yield getLink(url);
     res.json(data);
@@ -108,7 +108,7 @@ app.get('/d', (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
         });
         yield pyshell.end((err) => {
             if (err)
-                return res.send(err);
+                return res.sendFile(path.resolve('./') + './err.html');
         });
         // return res.download(path.resolve('./')+'/src/donlwdes/x.mp4');
     }

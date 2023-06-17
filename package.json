@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf www/ || true",
-    "build": " tsc && cp .npmrc dist/.npmrc &&cp package.json dist/package.json && cp -r src/py dist && cp -r src/donlwdes dist",
+    "build": " tsc && cp .npmrc dist/.npmrc &&cp package.json dist/package.json && cp -r src/py dist && cp -r src/donlwdes dist&& cp  src/err.html dist/err.html",
     "start": "node index.js",
     "pre": "npx prettier --write src/**/**/*.ts ",
     "lint": "eslint dist/*.js ",
