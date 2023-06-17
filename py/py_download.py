@@ -8,7 +8,8 @@ del data[0]
 linkf=data[0]
 typef=data[1]
 filterf=data[2]
-
+if(filterf=='240p'):
+    filterf='360p'
 def generate_random_text(length):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(length))
