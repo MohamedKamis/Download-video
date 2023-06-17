@@ -22,7 +22,7 @@ yt = YouTube(linkf)
 streams = yt.streams.filter(progressive=True,res=filterf)
 stream = streams.first()
 nam=random_text+'.'+typef
-src2='../donlwdes'
+src2='./donlwdes'
 
 stream.download(output_path=src2,filename=nam)
 # if(stream.download(output_path=src,filename=nam)):
