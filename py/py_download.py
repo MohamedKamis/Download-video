@@ -14,7 +14,6 @@ def generate_random_text(length):
     return ''.join(random.choice(letters) for i in range(length))
 
 random_text = generate_random_text(10)
-# print(random_text)
 # print(data)
 from pytube import YouTube
 
@@ -23,7 +22,7 @@ yt = YouTube(linkf)
 streams = yt.streams.filter(progressive=True,res=filterf)
 stream = streams.first()
 nam=random_text+'.'+typef
-src2='donlwdes'
+src2='../donlwdes'
 
 stream.download(output_path=src2,filename=nam)
 # if(stream.download(output_path=src,filename=nam)):
