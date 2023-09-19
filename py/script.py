@@ -18,6 +18,7 @@ for file_name in os.listdir(dir_path):
 # if(targt=='youtube'):
     # print(targt)
 yt = YouTube(link)
+"""
 List=[]
 for stream in yt.streams:
     if(stream.resolution!=None ):
@@ -25,7 +26,8 @@ for stream in yt.streams:
 my_set = set(List)
 
 data1= ' '.join(my_set)
-# data1="144 360 1080"
+"""
+data1="144 240 360 1080"
 print(data1)
 # else:
     # print(data1[1])
