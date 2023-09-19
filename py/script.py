@@ -5,6 +5,7 @@ link=data1[0]
 targt=data1[1]
 from pytube import YouTube
 dir_path="./donlwdes"
+
 import os
 for file_name in os.listdir(dir_path):
     if(file_name!='text.txt'):
@@ -16,8 +17,8 @@ for file_name in os.listdir(dir_path):
             os.remove(file_path)
 # print('done')
 # if(targt=='youtube'):
-    # print(targt)
-yt = YouTube(link)
+    # print(targt
+#yt = YouTube(link)
 """
 List=[]
 for stream in yt.streams:
