@@ -28,7 +28,7 @@ my_set = set(List)
 
 data1= ' '.join(my_set)
 """
-data1="144 240 360 1080"
+data1="144p 240p 360p 1080p"
 print(data1)
 # else:
     # print(data1[1])
