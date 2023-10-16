@@ -24,7 +24,8 @@ yt = YouTube(linkf)
 streams = yt.streams.filter(progressive=True,res=filterf)
 stream = streams.first()
 nu=stream.default_filename
-nam=nu+'.'+typef
+nu2=nu.split('.mp4')[0]
+nam=nu2+'.'+typef
 src='./src/donlwdes'
 src2='./donlwdes'
 
